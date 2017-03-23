@@ -1,0 +1,10 @@
+{% for feature in page.features %}
+  <div class='fadein mod modIconText' data-delay='{{ 300 | times:forloop.index0 }}'>
+    <div class='icon-text-simple'>
+      <i class='fa fa-{{feature.icon}}'></i>
+      <h3>{{feature.title}}</h3>
+      <p>{{feature.desc}}</p>
+    </div>
+    <div class='two spacing'></div>
+  </div>
+{% endfor %}

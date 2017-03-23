@@ -1,59 +1,251 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Hashview by hashview</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Hashview</h1>
-      <h2 class="project-tagline">A web front-end for password cracking and analytics</h2>
-    </section>
+---
+layout: default
+section_id: home
+slides:
+  - bg: images/harddrive.jpg
+    klass: centered-text
+    title:
+      klass: bottom-to-top
+      text: Controlled password cracking
+    buttons:
+      klass: bottom-to-top
+      items:
+        - klass: boxed
+          text: View Features
+          link_to: /features.html
+        - text: Install Now
+          link_to: http://github.com/hashview/hashview
+  - bg: images/server1.jpg
+    klass: centered-text
+    title:
+      klass: bottom-to-top
+      text: Efficient &amp; Powerful
+    buttons:
+      klass: bottom-to-top
+      items:
+        - text: Hashview News
+          link_to: blog/
+  - bg: images/code1.jpg
+    klass: centered-text
+    title:
+      klass: bottom-to-top
+      text: Fancy Analytics
+    buttons:
+      klass: bottom-to-top
+      items:
+        - text: View Screenshots
+          link_to: http://github.com/hashview/hashview
 
-    <section class="main-content">
-      <center><h3><a href="http://www.github.com/hashview/hashview">Check it out on GitHub</a></h3></center>
+
+features:
+  - icon: trophy
+    title: Web Design
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+  - icon: cogs
+    title: Web Development
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+  - icon: pagelines
+    title: Branding
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+  - icon: lock
+    title: Security
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+
+milestones:
+  - icon: star
+    from: 0
+    to: 164
+    title: Github stars
+  - icon: frown-o
+    from: 0
+    to: 0
+    title: Beers offered
+  - icon: users
+    from: 0
+    to: 3
+    title: Developers
+  - icon: gamepad
+    from: 0
+    to: 30
+    title: GPUs in our cluster
+
+---
+
+
+<div class='mod modDefaultSlider'>
+  <div class='sequence' data-autostop='on' data-timeout='0'>
+    <a class='sequence-prev' href='javascript:void(0);'>
+      <span></span>
+    </a>
+    <a class='sequence-next' href='javascript:void(0);'>
+      <span></span>
+    </a>
+    <ul class='sequence-pagination'>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign class = 'current' %}
+        {% else %}
+          {% assign class = '' %}
+        {% endif %}
+        <li class="{{class}}"></li>
+      {% endfor %}
+    </ul>
+    <ul class='sequence-canvas'>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign style = 'static' %}
+        {% else %}
+          {% assign style = '' %}
+        {% endif %}
+
+        <li class='frame {{style}} {{ slide.klass }}'>
+          <div class='bg' style='background-image: url({{ slide.bg}});'></div>
+          <div class='small-title {{ slide.small_title.klass }}'>
+            <div class='row'>
+              <div class='large-12 columns'>
+                <h2>{{ slide.small_title.text }}</h2>
+              </div>
+            </div>
+          </div>
+          <div class='title {{ slide.title.klass }}'>
+            <div class='row'>
+              <div class='large-12 columns'>
+                <h2>{{ slide.title.text }}</h2>
+              </div>
+            </div>
+          </div>
+          <div class='buttons-wrapper {{ slide.buttons.klass }}'>
+            <div class='row'>
+              <div class='large-12 columns'>
+                <div class='two spacing'></div>
+                {% for button in slide.buttons.items %}
+                  <a class='button {{ button.klass }}' href='{{ button.link_to }}'>{{ button.text }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="three spacing"></div>
+
+<div class="row">
+  <div class="medium-4 large-4 columns">
+    {% include icon-text.html title='Analytics' desc='Awesome analytics using D3. You can ctrl+c, ctrl+v these statistics straight into your reports.' icon_class='fa fa-area-chart' delay='200' shape_class='icon-text-circle' %}
+  </div>
+  <div class="medium-4 large-4 columns">
+    {% include icon-text.html title='Smart Workflow' desc='Job queuing. Predefined tasks. Smart wordlist generation. Fine tuning of crack times. Start, stop, and resume jobs.' icon_class='fa fa-rocket' delay='0' shape_class='icon-text-circle' %}
+  </div>
+  <div class="medium-4 large-4 columns">
+    {% include icon-text.html title='Open source' desc='Free to use and modify. Actively developed. This project is made possible by the awesome Hashcat team!' icon_class='fa fa-code' delay='400' shape_class='icon-text-circle' %}
+  </div>
+</div>
+
+<div class="spacing"></div>
+
+<div class='full'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Watch our Derbycon Talk" %}
+      <div class='spacing'></div>
       <p>
-      <h2>Features</h2>
-      <ul>
-        <li>Create predefined hashcat tasks</li>
-        <li>Manage jobs (set of predefined tasks)</li>
-        <li>Analytics and reports</li>
-        <li>Job queueing (no more idle time or wasted cycles)</li>
-        <li>retroactively update hashes previously not cracked</li>
-        <li>Searchable results by username, hash, or password</li>
-      </ul>
-      <p>
-      <h3>DerbyCon 2016 Talk on Hashview</h3>
-      <p>
-       <iframe width="854" height="480" src="https://www.youtube.com/embed/YR7bZPWasWk" frameborder="0" allowfullscreen></iframe>
-      <p>
-      <h3>Contact Us</h3>
-      @caseycammilleri
-      <br>
-      @jarsnah12
-
-      <footer class="site-footer">
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
+        We publically launched Hashview at Derbycon 2016. You can get a good idea of what Hashview is capable of by watching this video. Or check out the screenshots and features list for the latest updates.
+      </p>
+      <div class='three spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <iframe class="fadeinleft" width="1200" height="768" src="https://www.youtube.com/embed/YR7bZPWasWk" frameborder="0" allowfullscreen=""></iframe>
+    <br>
+  </div>
+  <div class='spacing'></div>
+</div>
 
 
-  </body>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<div class='full parallax' style='background-image: url(images/code2.jpg); color: #fff;'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Analytics" color="#fff" %}
+      <div class='spacing'></div>
+      <p class='centered-text' style='color: #ccc;'>
+        Here are some basic facts about Hashview.
+      </p>
+      <div class='two spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    {% for milestone in page.milestones %}
+      <div class='medium-3 large-3 columns'>
+        <div class='mod modMilestone'>
+          <i class='fa fa-{{milestone.icon}}'></i>
+          <strong data-from='{{milestone.from}}' data-to='{{milestone.to}}'>&nbsp;</strong>
+          <span>{{milestone.title}}</span>
+          <div class='four spacing'></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class='two spacing'></div>
+</div>
 
-  ga('create', 'UA-88202351-1', 'auto');
-  ga('send', 'pageview');
 
-  </script>
-</html>
+<div class='full' style='background: #f5f5f5'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Recent posts" %}
+      <div class='spacing'></div>
+      <div class='two spacing'></div>
+    </div>
+  </div>
+
+  <div class='row'>
+    {% for post in site.posts %}
+      {% if forloop.index > 3 %}
+        {% break %}
+      {% endif %}
+
+      <div class='large-4 medium-4 columns'>
+        <div class='mod modBlogPost'>
+          {% for image in post.images %}
+            {% unless forloop.first %}
+              {% break %}
+            {% endunless %}
+            <a href="{{post.url}}"><img alt="" src="{{image}}" /></a>
+          {% endfor %}
+          <div class='content'>
+            <p class='date'>{{post.date | date: "%B %d, %Y" }}</p>
+            <h4><a href="#">{{post.title}}</a></h4>
+            <p>{{post.excerpt}}</p>
+            <!--
+              <div class="tags">
+                {% for cat in post.categories %}
+                  <a href="#">{{cat | capitalize}}</a>
+                  {% unless forloop.last %}
+                    ,
+                  {% endunless %}
+                {% endfor %}
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+
+  <div class='two spacing'></div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <p class='centered-text'>
+        <a class='button' href='blog.html'>See more posts</a>
+      </p>
+    </div>
+  </div>
+  <div class='two spacing'></div>
+
+</div>
