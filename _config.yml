@@ -1,0 +1,18 @@
+# Site settings
+title: Hashview
+email: contact@hashview.io
+description: > # this means to ignore newlines until "baseurl:"
+  Hashview is a web frontend for hashcat with distributed agents and fancy analytics.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.hashview.io" # the base hostname & protocol for your site
+twitter_username: caseycammilleri
+github_username:  hashview
+
+# Build settings
+markdown: kramdown
+
+paginate: 3
+paginate_path: "blog/page:num"
+
+# gems
+gems: [jekyll-paginate]

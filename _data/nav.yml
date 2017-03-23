@@ -1,0 +1,12 @@
+- name: Home
+  path: index.html
+  section_id: home
+- name: Features
+  path: features.html
+  section_id: services
+- name: Screenshots
+  path: screenshots.html
+  section_id: screenshots
+- name: Blog
+  path: blog/
+  section_id: blog

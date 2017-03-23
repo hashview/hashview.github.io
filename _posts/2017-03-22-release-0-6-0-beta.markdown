@@ -1,0 +1,42 @@
+---
+layout: post
+title:  New release - 0.6.0-beta
+author: Hans
+date:   2017-03-22 10:52:12
+images: images/vector3-6-beta.png
+excerpt:
+  This release is HUGE. It includes 14 new enhancements/features. We've also started laying the foundation for some awesome features.
+categories: Releases
+---
+## Hashview updates
+
+Its been a long time coming, but we've been working hard behind the scenes to bring you the latest release of Hashview. In this release we've not only addressed several reported bugs, but added a few new features too. In addition we've also started laying the foundation for some awesome features that we're not quite ready to reveal, but stay tuned ;).
+
+For the lazy:
+If you're new Hashview, you can get started by following the instructions found here:  https://github.com/hashview/hashview/wiki/01_Installing-Hashview
+
+To update to your current install of Hashview to the latest version, please follow the instructions listed here: https://github.com/hashview/hashview/wiki/Upgrading-Hashview
+
+
+
+##  New Features
+
+With this release we've included 11 new enhancements/features. Here are just a few of them.
+
+#### Importing Multiple Wordlists
+Whether its a new install, or you have several large text file (see: https://blog.g0tmi1k.com/2011/06/dictionaries-wordlists/) Hashview now offers a new way to import your wordlists. To use this new feature, all you need to is SCP/FTPS your wordlists to the control/wordlists/ folder. Hashview will automatically detect these wordlists and automatically import them for you!
+
+#### Improved Database Support
+With our previous release we've refactored the database to improve all hash related functions. With this release we take it one step further by enabling indexing on all cracked and uncracked hashes as well as extended the column length to 1024 characters.  This allows Hashview to support larger hashes such as Kerberos and NetNTLMv2.
+
+
+#### Finer Hashcat tuning
+By request, we've implemented the ability to allow you to fine tune your hashcat jobs. Hashview now supports the following flags: ---force, ---opencl-device-types, ---workload-profile ---gpu-temp-disable, ---gpu-temp-abort, and --gpu-temp-retain. To take advantage of these new (optional) settings, just set them in the Global-Settings -> Hashcat tab.
+
+#### Salt Support
+Previous versions of Hashview had problems when importing cracked passwords that had salts, or contained special characters. With the latest version, this has been corrected and as a result, Hashview now handles 20 more hashtypes!
+
+#### Themes!
+ Hashview now supports themes! To change your theme, just navigate to the Global Settings -> UI page, and select from one of six new color themes.  Personally we really like slate.
+
+That it for now! Checkout the release here at https://github.com/hashview/hashview/releases. Keep in mind this is still beta, but if you have any issues, please report them! And as always, happy cracking!
