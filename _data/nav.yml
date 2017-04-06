@@ -7,6 +7,8 @@
 - name: Screenshots
   path: screenshots.html
   section_id: screenshots
+- name: Download
+  path: download.html
 - name: Blog
   path: blog/
   section_id: blog
