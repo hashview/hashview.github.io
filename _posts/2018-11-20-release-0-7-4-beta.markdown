@@ -1,0 +1,49 @@
+---
+layout: post
+title:  New release - 0.7.4-beta
+author: Casey & Hans
+date:   2018-11-20 00:00:01
+images: images/abstract0-7-4.jpg
+excerpt:
+  A long overdue release for the Hashview Project. Several bug fixes, new features and more!
+categories: Releases
+---
+## Major Changes at a Glance
+
+1) Dynamic Chunking 
+2) New Analytics Portlet
+3) Group Tasks
+4) Dynamic Word Lists  
+
+#### Dynamic Chunking
+Ever since our release to support distributed cracking, Hashview has had a hidden problem. It assumed that each agent resided on a system with equal cracking power. This of course is not always the case, so you'd end up with a weaker powered rig being assigned a huge task to complete. This is not ideal. So, to address this, we've built in the ability to let Hashview decide for you the size of the chunks distributed to each agent. This decision is made based on cracking speeds reported by each agent and consistently update. This approach isn’t 100% accurate, so if you'd like to switch back to static chunk sizes, that option is still available to you in the settings section.
+
+<img src="/images/dynamic-chunking.png" alt="Dynamic Chunks" style="width: 600px;"/>
+
+##### New Analytics Portlet
+When doing analysis on cracked passwords it’s a good idea to report on what character sets are used. While we currently offer the ability to see the top 10 (up from 4) masks used. This new portlet lets you see the character classes used.
+
+<img src="/images/charset-breakdown.png" alt="Character Sets" style="width: 600px;"/>
+
+#### Grouped Tasks
+We've found that for any given job, there's a certain set of tasks we always seem to run. Now, with task groups, you can provision a set of tasks to a group that will, when selected, automatically add the set of tasks to your job.
+
+You can create your own task group, by selecting "tasks"->"Task Groups" From there you can create, edit, delete task groups. 
+
+When creating a job, during the step where you assign tasks. You can now select the task group instead of an individual task. 
+
+<img src="/images/task-groups.png" alt="Character Sets" style="width: 600px;"/>
+
+#### Dynamic Word Lists
+With our previous release, we introduced Smart Wordlists. These were wordlists that consisted of a unique set of dictionary words across all available wordlists within Hashview, including cleartext passwords from previously cracked hashfiles. Unfortunately, the process for creating and maintaning these wordlists were incredibly CPU intensive. As a result, they have been removed in this release.
+
+Instead, we're introducing Dynamic Word Lists. Similar to Smart Wordlists, Dynamic Wordlists consist of all clear text passwords cracked for a given scope. Scopes include all clear text passwords for a given hashfile, customer or all. 
+
+Not only are these quicker to generate, they're easier to maintain. From a user standpoint, you don’t need to do anything. Whenever a hashfile is loaded into Hashview, a dynamic wordlist is automatically generated. 
+
+Note, this is different than using a POT file, as a potfile is a link between a hash and its clear text value. In a Dynamic Wordlist, we don’t care what the original hash value was, we simply treat it as another dictionary word to try.
+
+#### Final Thoughts
+
+Anyways, that’s it for now. To upgrade see <a href="https://github.com/hashview/hashview/wiki/05-Upgrading-Hashview"> The Wiki </a>, and be sure to report any problems. 
+Lastly, this release was long overdue and for that I apologize. We've had some great feedback from the community and lots of contributes from users. Without your support this project wouldn’t be where it is today. Thank you!
