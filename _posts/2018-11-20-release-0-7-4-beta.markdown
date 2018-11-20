@@ -11,8 +11,11 @@ categories: Releases
 ## Major Changes at a Glance
 
 1) Dynamic Chunkiing
+
 2) New Analytics Portlet
+
 3) Group Tasks
+
 4) Dynamic Wordlists
 
 #### Dynamic Chunking
