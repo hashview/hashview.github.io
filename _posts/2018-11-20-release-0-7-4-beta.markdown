@@ -10,10 +10,14 @@ categories: Releases
 ---
 ## Major Changes at a Glance
 
-1) Dynamic Chunking 
+1) Dynamic Chunking
+
 2) New Analytics Portlet
+
 3) Group Tasks
+
 4) Dynamic Word Lists  
+
 
 #### Dynamic Chunking
 Ever since our release to support distributed cracking, Hashview has had a hidden problem. It assumed that each agent resided on a system with equal cracking power. This of course is not always the case, so you'd end up with a weaker powered rig being assigned a huge task to complete. This is not ideal. So, to address this, we've built in the ability to let Hashview decide for you the size of the chunks distributed to each agent. This decision is made based on cracking speeds reported by each agent and consistently update. This approach isn’t 100% accurate, so if you'd like to switch back to static chunk sizes, that option is still available to you in the settings section.
