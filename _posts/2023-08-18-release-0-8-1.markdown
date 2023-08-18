@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  Update to Hashview (v0.8.1)
+title:  Update to Hashview (0.8.1)
 author: Hans
-date:   2022-10-21 00:00:01
+date:   2023-10-18 00:00:01
 images: images/abstract0-8-1.png
 excerpt:
-  Hashview v8.1 is finally here!!
+  Hashview v0.8.1 is finally here!!
 categories: Releases
 ---
 
