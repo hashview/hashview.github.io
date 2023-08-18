@@ -66,10 +66,10 @@ Those are just some of the items that have changed in this most recent release o
 ## Upgrading from v0.8.0 to v0.8.1
 Upgrading is easy:
 
-```
-cd hashview
-git pull
-python3 ./hashview.py
-```
+  ``` bash
+  cd hashview
+  git pull
+  python3 ./hashview.py
+  ```
 
 Anyways, that’s it for now. Be sure to use the <a href="https://github.com/hashview/hashview/issues">Issues</a> page to report any problems or request features.
