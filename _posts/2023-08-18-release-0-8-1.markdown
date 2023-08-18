@@ -1,0 +1,75 @@
+---
+layout: post
+title:  Update to Hashview (v0.8.1)
+author: Hans
+date:   2022-10-21 00:00:01
+images: images/abstract0-8-1.png
+excerpt:
+  Hashview v8.1 is finally here!!
+categories: Releases
+---
+
+## Haview v0.8.1 is HERE!
+
+Introducing the latest version of Hashview, v0.8.1. This is a minor update with some new features and some squashed bugs. 
+
+## New features in v0.8.1
+- <b>Maximum Runtimes:</b> In our daily use, with multiple users we’ve encountered problems where one user queues up a long running job, clogging up the pipeline of other users who wish to have their hashes cracked. In situations like these, lower privileged users had to either ask the originating job creator to stop their job or ask an admin to stop the job for them. Well now there’s a better way. Now, admins can set the maximum runtime for Jobs and Tasks that is enforced globally with in the App. For example, let’s say you had the following:
+
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/918ff1ff-8ac8-4787-a230-85bbea5261db)
+
+  With this setup the maximum amount of time any task will be allowed to run for will be capped at 4 hours. And the Job overall, will be capped at 24. This means no matter how many tasks a user assigns to a job, no matter how slow the hash, users who are waiting in line will get their spot moved up in the queue more quickly. Of course, this feature can be disabled should you not wish to use it by setting these values to 0
+
+- <b>Job Priority:</b> Not all jobs are created equal. Especially when you got that sweet Kerberos ticket that just <i>needs</i> to be cracked right away. Well now, as a standard user, during the creation of your job, you can set the priority from any value between low to high.
+
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/f8c51676-52a8-4e27-8900-5c7777e1a75d)
+
+  Then, when agent’s check-in to process their next task, the internal dispatch queue in Hashview will prioritize jobs with a higher priority over those with a lower priority. As an admin of Hashview you can, with in the settings sections of the App, enable or disable users’ ability to set this value. If disabled, all jobs will carry the normal priority. 
+
+- <b>More Hash Support:</b> Thanks to some public pull request, Hashview supports over 75 different hash types. Most of which will be the common ones you’d expect to encounter during your engagements. However, if one is missing feel free to submit a request on the issues page. Or submit a PR 😊
+
+- <b>Task Editing:</b> Absent from the last release was the ability for users to edit a task once it was created. Now, task owners or admins can edit an existing task, so long as it’s not assigned to job. 
+ 
+- <b>Better Sanity Checks During Job Creation:</b> One of the most frequent issues users encountered with previous versions of hashview was encountered during the creation of a job. Users would select the wrong file type or hash type resulting in hashview not being able to process the job and ultimately the failure to cache the supplied hash. In this version, Hashview will now limit which hashes are supported based on the file type supplied. For example, before, it was possible to tell Hashview that your hashtype was in the form of NetNTLMv2, but then supply a Kerberos hash. Now, when you select the Hash File format, your selectable Hashtypes will match:
+
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/5df8f7f2-7018-47a4-933c-f9a0303d2a2f)
+
+  Of course, if you just have a plain hash you can always select the $hash Hash File format to gain access to all the available hashes:
+
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/a313b9aa-ea87-43bc-9719-0dae4bf8f616)
+
+- <b>Two New Analytic Portlets:</b> We’ve added two new portlets to the analytics page. The first, is Recovered Hashes. Recovered Hashes, not to be confused with Recovered Accounts is the total number of recovered hashes vs total number of unrecovered hashes. For example, let’s say you had the following results after running a job in hashview.
+
+  |user|Password|
+  |----|----|
+  | User 1| password|
+  | User 1| password1|
+  | User 1| password1|
+  | User 1| password2|
+  | User 1| <i>unrecovered</i>|
+
+  The Recovered Accounts would show, 3 Recovered and 1 Unrecovered. Whereas the Recovered Hashes would show 2 Recovered and 1 Unrecovered.
+
+  The portlet is a table of account where the password matches the username of the account. Sometimes we come across older environments where admins will set these a service account *cough*<name>*cough* and set the passwords to be the same thing. This should stop, and this portlet can highlight those offending accounts.
+
+
+- <b>Search API:</b> Another popular request was to build integration points into hashview for other third-party solutions. To aid in this, Hashview now has a <i>limited</i> API! To start, any user can, in their profile, generate an API token.
+
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/3ecb5db7-5bc9-4d0a-8976-fc0383f821dc)
+
+  With this token, users can then submit a request to hashview to see if the supplied hash has been recovered and is in the database. If found hashview will not only provide the clear text result, but it’ll also provide the hashtype.
+
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/404bb4bc-76e2-45a8-be64-b368a34893d1)
+
+Those are just some of the items that have changed in this most recent release of hashview. If you want a complete list, be sure to check out the CHANGELOG.md (https://github.com/hashview/hashview/blob/main/CHANGELOG.md) up on github. To upgrade your current release just running the following commands (and be sure to update your hashview-agents too while you’re at it)
+
+## Upgrading from v0.8.0 to v0.8.1
+Upgrading is easy:
+
+```
+cd hashview
+git pull
+python3 ./hashview.py
+```
+
+Anyways, that’s it for now. Be sure to use the <a href="https://github.com/hashview/hashview/issues">Issues</a> page to report any problems or request features.
