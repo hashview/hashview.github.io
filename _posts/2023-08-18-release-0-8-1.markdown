@@ -61,7 +61,7 @@ Introducing the latest version of Hashview, v0.8.1. This is a minor update with 
 
   ![image](https://github.com/hashview/hashview.github.io/assets/2417131/404bb4bc-76e2-45a8-be64-b368a34893d1)
 
-Those are just some of the items that have changed in this most recent release of hashview. If you want a complete list, be sure to check out the CHANGELOG.md (https://github.com/hashview/hashview/blob/main/CHANGELOG.md) up on github. To upgrade your current release just running the following commands (and be sure to update your hashview-agents too while you’re at it)
+Those are just some of the items that have changed in this most recent release of hashview. If you want a complete list, be sure to check out the CHANGELOG.md (https://github.com/hashview/hashview/blob/main/CHANGELOG.md) up on github. To upgrade your current release just running the following commands (and be sure to update your hashview-agents too while you’re at it).
 
 ## Upgrading from v0.8.0 to v0.8.1
 Upgrading is easy:
