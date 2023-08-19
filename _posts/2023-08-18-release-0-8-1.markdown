@@ -9,7 +9,7 @@ excerpt:
 categories: Releases
 ---
 
-## Haview v0.8.1 is HERE!
+## Hashview v0.8.1 is HERE!
 
 Introducing the latest version of Hashview, v0.8.1. This is a minor update with some new features and some squashed bugs. 
 
