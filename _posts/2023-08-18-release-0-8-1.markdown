@@ -48,10 +48,11 @@ Introducing the latest version of Hashview, v0.8.1. This is a minor update with 
   | User 1| password2|
   | User 1| <i>unrecovered</i>|
 
-  The Recovered Accounts would show, 3 Recovered and 1 Unrecovered. Whereas the Recovered Hashes would show 2 Recovered and 1 Unrecovered.
+  The Recovered Accounts would show, 3 Recovered and 1 Unrecovered. Whereas the Recovered Hashes would show 2 Recovered and 1 Unrecovered. With this most recent release both are represented as different graphs:
 
-  The portlet is a table of account where the password matches the username of the account. Sometimes we come across older environments where admins will set these a service account *cough*<name>*cough* and set the passwords to be the same thing. This should stop, and this portlet can highlight those offending accounts.
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/59c48ead-3e50-4461-af88-954b4dbb34eb)
 
+  The second new portlet, titled: Accounts Where The Password is The Same As The Username, is a table of account where the password matches the username. Sometimes we come across older environments where admins will set these a service account *cough*INSERT_BACKUP_VENDOR_NAME_HERE*cough* and set the passwords to be the same thing. This should stop, and this portlet can highlight those offending accounts.
 
 - <b>Search API:</b> Another popular request was to build integration points into hashview for other third-party solutions. To aid in this, Hashview now has a <i>limited</i> API! To start, any user can, in their profile, generate an API token.
 
