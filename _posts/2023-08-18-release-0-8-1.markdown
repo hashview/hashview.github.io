@@ -22,7 +22,7 @@ Introducing the latest version of Hashview, v0.8.1. This is a minor update with 
 
 - <b>Job Priority:</b> Not all jobs are created equal. Especially when you got that sweet Kerberos ticket that just <i>needs</i> to be cracked right away. Well now, as a standard user, during the creation of your job, you can set the priority from any value between low to high.
 
-  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/f8c51676-52a8-4e27-8900-5c7777e1a75d)
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/f119cec1-135b-42ff-9e2d-e0ef47378c3a)
 
   Then, when agent’s check-in to process their next task, the internal dispatch queue in Hashview will prioritize jobs with a higher priority over those with a lower priority. As an admin of Hashview you can, with in the settings sections of the App, enable or disable users’ ability to set this value. If disabled, all jobs will carry the normal priority. 
 
@@ -32,11 +32,11 @@ Introducing the latest version of Hashview, v0.8.1. This is a minor update with 
  
 - <b>Better Sanity Checks During Job Creation:</b> One of the most frequent issues users encountered with previous versions of hashview was encountered during the creation of a job. Users would select the wrong file type or hash type resulting in hashview not being able to process the job and ultimately the failure to cache the supplied hash. In this version, Hashview will now limit which hashes are supported based on the file type supplied. For example, before, it was possible to tell Hashview that your hashtype was in the form of NetNTLMv2, but then supply a Kerberos hash. Now, when you select the Hash File format, your selectable Hashtypes will match:
 
-  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/5df8f7f2-7018-47a4-933c-f9a0303d2a2f)
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/3bc479b9-422a-4439-9d12-bd82c8148f23)
 
   Of course, if you just have a plain hash you can always select the $hash Hash File format to gain access to all the available hashes:
 
-  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/a313b9aa-ea87-43bc-9719-0dae4bf8f616)
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/35d21bcd-a204-4904-962a-436b988275a6)
 
 - <b>Two New Analytic Portlets:</b> We’ve added two new portlets to the analytics page. The first, is Recovered Hashes. Recovered Hashes, not to be confused with Recovered Accounts is the total number of recovered hashes vs total number of unrecovered hashes. For example, let’s say you had the following results after running a job in hashview.
 
@@ -56,11 +56,11 @@ Introducing the latest version of Hashview, v0.8.1. This is a minor update with 
 
 - <b>Search API:</b> Another popular request was to build integration points into hashview for other third-party solutions. To aid in this, Hashview now has a <i>limited</i> API! To start, any user can, in their profile, generate an API token.
 
-  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/3ecb5db7-5bc9-4d0a-8976-fc0383f821dc)
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/884304e0-2b6f-4b2a-9fe5-ebd4361aa876)
 
   With this token, users can then submit a request to hashview to see if the supplied hash has been recovered and is in the database. If found hashview will not only provide the clear text result, but it’ll also provide the hashtype.
 
-  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/404bb4bc-76e2-45a8-be64-b368a34893d1)
+  ![image](https://github.com/hashview/hashview.github.io/assets/2417131/ee2552c2-a9d2-4eff-b90e-d44504d8b1ac)
 
 Those are just some of the items that have changed in this most recent release of hashview. If you want a complete list, be sure to check out the CHANGELOG.md (https://github.com/hashview/hashview/blob/main/CHANGELOG.md) up on github. To upgrade your current release just running the following commands (and be sure to update your hashview-agents too while you’re at it).
 
