@@ -25,7 +25,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>New Dynamic Wordlists:</b> Hashview can now auto-generate additional dynamic wordlists for you, including an "All Usernames" list (built from every uploaded hashfile), an "All Customers" list, and an NTLM ciphertext list — all kept up to date automatically.
 
-<img width="1314" height="354" alt="Screenshot 2026-06-01 at 11 16 26 AM" src="https://github.com/user-attachments/assets/ee3892fa-e8a0-4cfa-a609-ff850cfa5e69" />
+<img width="1314" height="354" alt="Screenshot 2026-06-01 at 11 16 26 AM" src="images/screenshots/Screenshot 2026-06-01 at 11.16.26 AM.png" />
 
 - <b>Dashboard & Analytics Upgrades:</b> The home page now features an Activity Graph charting passwords recovered over the past 7 days, so you can see your cracking momentum at a glance. We've also added "Hashview Wrapped" — a fun year-in-review of your cracking stats — and a new Shared Password Detection portlet that highlights accounts reusing the same password.
   
