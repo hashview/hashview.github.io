@@ -17,7 +17,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>New Attack Modes:</b> Hashview now supports more of hashcat's attack modes out of the box. In addition to your usual wordlist and brute-force attacks, you can now run a Combinator attack (mode 1) to mash two wordlists together, as well as Hybrid Wordlist+Mask (mode 6) and Hybrid Mask+Wordlist (mode 7) attacks for those passwords that are <i>almost</i> in your dictionary.
 
-  <img width="1340" height="713" alt="Screenshot 2026-06-01 at 11 13 39 AM" src="https://github.com/user-attachments/assets/e1e2c1c3-5297-4f5f-8793-dacdabf05544" />
+  <img width="1340" height="713" alt="Screenshot 2026-06-01 at 11 13 39 AM" src="images/screenshots/Screenshot 2026-06-01 at 11.13.39 AM.png" />
 
 - <b>"I'm Feeling Lucky" Task Assignment:</b> Not sure where to start? Let Hashview do the thinking. With a single click, "I'm Feeling Lucky" will automatically assign the top 10 historically most effective tasks to your job - the attacks that have cracked the most hashes for you in the past.
 
