@@ -1,0 +1,59 @@
+---
+layout: post
+title:  Update to Hashview (0.8.2)
+author: Hans
+date:   2026-06-01 00:00:01
+images: images/abstract0-8-2.png
+excerpt:
+  Hashview v0.8.2 is here with new attack modes, smarter job automation, and a refreshed UI!
+categories: Releases
+---
+
+## Hashview v0.8.2 is HERE!
+
+Introducing the latest version of Hashview, v0.8.2. This release packs in a bunch of new attack options, some smarter automation to take the busywork out of cracking, a refreshed look, and a healthy round of bug fixes. Below are some of the highlights.  For the full list be sure to check out the CHANGELOG.
+
+## New features in v0.8.2
+
+- <b>New Attack Modes:</b> Hashview now supports more of hashcat's attack modes out of the box. In addition to your usual wordlist and brute-force attacks, you can now run a Combinator attack (mode 1) to mash two wordlists together, as well as Hybrid Wordlist+Mask (mode 6) and Hybrid Mask+Wordlist (mode 7) attacks for those passwords that are <i>almost</i> in your dictionary.
+
+  ![image](images/screenshots/Screenshot 2026-06-01 at 11.13.39 AM.png)
+
+- <b>"I'm Feeling Lucky" Task Assignment:</b> Not sure where to start? Let Hashview do the thinking. With a single click, "I'm Feeling Lucky" will automatically assign the top 10 historically most effective tasks to your job - the attacks that have cracked the most hashes for you in the past.
+
+- <b>"One and Done" Job Mode:</b> Sometimes you only need a single result. This new job mode automatically stops the job the moment the first hash is recovered, freeing up your agents for the next job in line.
+
+- <b>New Dynamic Wordlists:</b> Hashview can now auto-generate additional dynamic wordlists for you, including an "All Usernames" list (built from every uploaded hashfile), an "All Customers" list, and an NTLM ciphertext list — all kept up to date automatically.
+
+  ![image](images/screenshots/images/screenshots/Screenshot 2026-06-01 at 11.16.26 AM.png)
+
+- <b>Dashboard & Analytics Upgrades:</b> The home page now features an Activity Graph charting passwords recovered over the past 7 days, so you can see your cracking momentum at a glance. We've also added "Hashview Wrapped" — a fun year-in-review of your cracking stats — and a new Shared Password Detection portlet that highlights accounts reusing the same password.
+
+  ![image](images/screenshots/images/screenshots/Screenshot 2026-06-01 at 11.17.13 AM.png)
+
+- <b>Rules Editor:</b> No more jumping to the command line to tweak your rules. You can now view and edit hashcat rule files directly in the browser.
+
+- <b>Expanded API:</b> Building on the API introduced in v0.8.1, this release adds several new endpoints, including customer management, wordlist uploads, and job creation — making it easier than ever to integrate Hashview into your own workflows.
+
+- <b>More Hash Support:</b> We've expanded supported hash types again, adding DCC/DCC2, additional Kerberos variants, KeePass, more MS Office versions, and the ability to import NTLM hashes only.
+
+- <b>Refreshed UI & Usability:</b> Hashview has been upgraded to Bootstrap 5.3 for a cleaner, more modern look. On top of that, the Jobs and Tasks lists are now paginated with improved filtering, so large environments stay fast and easy to navigate.
+
+- <b>User & Notification Improvements:</b> Admins can now promote and demote user roles directly, users can update their own email address from their profile, and Hashview can send both Email and Pushover notifications at the same time.
+
+  ![image](images/screenshots/Screenshot 2026-06-01 at 11.18.17 AM.png)
+
+In addition to the features above, v0.8.2 includes a number of bug fixes. Sessions and CSRF tokens no longer break when the server restarts, agent error reporting is now working (with notifications to admins), and we've squashed a variety of race conditions, cascading deletion issues, and parsing problems.
+
+Those are just some of the items that have changed in this most recent release of hashview. If you want a complete list, be sure to check out the CHANGELOG.md (https://github.com/hashview/hashview/blob/main/CHANGELOG.md) up on github. To upgrade your current release just running the following commands (and be sure to update your hashview-agents too while you're at it).
+
+## Upgrading from v0.8.1 to v0.8.2
+Upgrading is easy:
+
+  ``` bash
+  cd hashview
+  git pull
+  python3 ./hashview.py
+  ```
+
+Anyways, that's it for now. Be sure to use the <a href="https://github.com/hashview/hashview/issues">Issues</a> page to report any problems or request features.
