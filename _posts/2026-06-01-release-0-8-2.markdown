@@ -41,7 +41,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>User & Notification Improvements:</b> Admins can now promote and demote user roles directly, users can update their own email address from their profile, and Hashview can send both Email and Pushover notifications at the same time.
 
-<img width="1310" height="457" alt="Screenshot 2026-06-01 at 11 18 17 AM" src="https://github.com/user-attachments/assets/d46b33d5-1517-4795-bcf0-25ba8f470df8" />
+<img width="1310" height="457" alt="Screenshot 2026-06-01 at 11 18 17 AM" src="images/screenshots/Screenshot 2026-06-01 at 11.18.17 AM.png" />
 
 In addition to the features above, v0.8.2 includes a number of bug fixes. Sessions and CSRF tokens no longer break when the server restarts, agent error reporting is now working (with notifications to admins), and we've squashed a variety of race conditions, cascading deletion issues, and parsing problems.
 
