@@ -29,7 +29,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>Dashboard & Analytics Upgrades:</b> The home page now features an Activity Graph charting passwords recovered over the past 7 days, so you can see your cracking momentum at a glance. We've also added "Hashview Wrapped" — a fun year-in-review of your cracking stats — and a new Shared Password Detection portlet that highlights accounts reusing the same password.
   
-  <img width="564" height="273" alt="Screenshot 2026-06-01 at 11 17 13 AM" src="https://github.com/user-attachments/assets/e4a2b7aa-ab3c-47c4-8115-1e7e9a137f35" />
+  <img width="564" height="273" alt="Screenshot 2026-06-01 at 11 17 13 AM" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2417131/601056134-c79e7ff8-6ccf-4b08-a152-73e7621d10a5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260601%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260601T164222Z&X-Amz-Expires=300&X-Amz-Signature=36696d1a89d2fcd2479debb1b4fd46e0466abb86dd4ed2e7de922e397aead71f&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng" />
 
 - <b>Rules Editor:</b> No more jumping to the command line to tweak your rules. You can now view and edit hashcat rule files directly in the browser.
 
@@ -41,7 +41,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>User & Notification Improvements:</b> Admins can now promote and demote user roles directly, users can update their own email address from their profile, and Hashview can send both Email and Pushover notifications at the same time.
 
-  <img width="1310" height="457" alt="Screenshot 2026-06-01 at 11 18 17 AM" src="https://github.com/user-attachments/assets/7939e820-4089-46d5-b638-f99d4c83489d" />
+  <img width="1310" height="457" alt="Screenshot 2026-06-01 at 11 18 17 AM" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2417131/601056221-e4a2b7aa-ab3c-47c4-8115-1e7e9a137f35.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260601%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260601T164243Z&X-Amz-Expires=300&X-Amz-Signature=6d19ffd08930dc0572128dcf8d982234e6dbd4b471c8ebba38fde257178e93ff&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng" />
 
 In addition to the features above, v0.8.2 includes a number of bug fixes. Sessions and CSRF tokens no longer break when the server restarts, agent error reporting is now working (with notifications to admins), and we've squashed a variety of race conditions, cascading deletion issues, and parsing problems.
 
