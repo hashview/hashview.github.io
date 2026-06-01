@@ -17,7 +17,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>New Attack Modes:</b> Hashview now supports more of hashcat's attack modes out of the box. In addition to your usual wordlist and brute-force attacks, you can now run a Combinator attack (mode 1) to mash two wordlists together, as well as Hybrid Wordlist+Mask (mode 6) and Hybrid Mask+Wordlist (mode 7) attacks for those passwords that are <i>almost</i> in your dictionary.
 
-  <img width="1340" height="713" alt="Screenshot 2026-06-01 at 11 13 39 AM" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2417131/601056035-f4966148-cc3b-43bd-9f2e-7db70b78e700.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260601%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260601T163936Z&X-Amz-Expires=300&X-Amz-Signature=8b6dbac04495b402d99812d01a7b6cb71bd0f74258d06c1556b1941482486289&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng" />
+  <img width="1340" height="713" alt="Screenshot 2026-06-01 at 11 13 39 AM" src="https://github.com/user-attachments/assets/e1e2c1c3-5297-4f5f-8793-dacdabf05544" />
 
 - <b>"I'm Feeling Lucky" Task Assignment:</b> Not sure where to start? Let Hashview do the thinking. With a single click, "I'm Feeling Lucky" will automatically assign the top 10 historically most effective tasks to your job - the attacks that have cracked the most hashes for you in the past.
 
@@ -25,11 +25,11 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>New Dynamic Wordlists:</b> Hashview can now auto-generate additional dynamic wordlists for you, including an "All Usernames" list (built from every uploaded hashfile), an "All Customers" list, and an NTLM ciphertext list — all kept up to date automatically.
 
-  <img width="1314" height="354" alt="Screenshot 2026-06-01 at 11 16 26 AM" src="https://github.com/user-attachments/assets/c79e7ff8-6ccf-4b08-a152-73e7621d10a5" />
+<img width="1314" height="354" alt="Screenshot 2026-06-01 at 11 16 26 AM" src="https://github.com/user-attachments/assets/ee3892fa-e8a0-4cfa-a609-ff850cfa5e69" />
 
 - <b>Dashboard & Analytics Upgrades:</b> The home page now features an Activity Graph charting passwords recovered over the past 7 days, so you can see your cracking momentum at a glance. We've also added "Hashview Wrapped" — a fun year-in-review of your cracking stats — and a new Shared Password Detection portlet that highlights accounts reusing the same password.
   
-  <img width="564" height="273" alt="Screenshot 2026-06-01 at 11 17 13 AM" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2417131/601056134-c79e7ff8-6ccf-4b08-a152-73e7621d10a5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260601%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260601T164222Z&X-Amz-Expires=300&X-Amz-Signature=36696d1a89d2fcd2479debb1b4fd46e0466abb86dd4ed2e7de922e397aead71f&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng" />
+<img width="564" height="273" alt="Screenshot 2026-06-01 at 11 17 13 AM" src="https://github.com/user-attachments/assets/3144b3a9-1aac-4e19-816c-08fc5642f2fd" />
 
 - <b>Rules Editor:</b> No more jumping to the command line to tweak your rules. You can now view and edit hashcat rule files directly in the browser.
 
@@ -41,7 +41,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>User & Notification Improvements:</b> Admins can now promote and demote user roles directly, users can update their own email address from their profile, and Hashview can send both Email and Pushover notifications at the same time.
 
-  <img width="1310" height="457" alt="Screenshot 2026-06-01 at 11 18 17 AM" src="https://github-production-user-asset-6210df.s3.amazonaws.com/2417131/601056221-e4a2b7aa-ab3c-47c4-8115-1e7e9a137f35.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260601%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260601T164243Z&X-Amz-Expires=300&X-Amz-Signature=6d19ffd08930dc0572128dcf8d982234e6dbd4b471c8ebba38fde257178e93ff&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng" />
+<img width="1310" height="457" alt="Screenshot 2026-06-01 at 11 18 17 AM" src="https://github.com/user-attachments/assets/d46b33d5-1517-4795-bcf0-25ba8f470df8" />
 
 In addition to the features above, v0.8.2 includes a number of bug fixes. Sessions and CSRF tokens no longer break when the server restarts, agent error reporting is now working (with notifications to admins), and we've squashed a variety of race conditions, cascading deletion issues, and parsing problems.
 
