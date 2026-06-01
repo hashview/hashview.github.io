@@ -29,7 +29,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>Dashboard & Analytics Upgrades:</b> The home page now features an Activity Graph charting passwords recovered over the past 7 days, so you can see your cracking momentum at a glance. We've also added "Hashview Wrapped" — a fun year-in-review of your cracking stats — and a new Shared Password Detection portlet that highlights accounts reusing the same password.
   
-<img width="564" height="273" alt="Screenshot 2026-06-01 at 11 17 13 AM" src="https://github.com/user-attachments/assets/3144b3a9-1aac-4e19-816c-08fc5642f2fd" />
+<img width="564" height="273" alt="Screenshot 2026-06-01 at 11 17 13 AM" src="images/screenshots/Screenshot 2026-06-01 at 11.17.13 AM.png" />
 
 - <b>Rules Editor:</b> No more jumping to the command line to tweak your rules. You can now view and edit hashcat rule files directly in the browser.
 
