@@ -17,7 +17,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>New Attack Modes:</b> Hashview now supports more of hashcat's attack modes out of the box. In addition to your usual wordlist and brute-force attacks, you can now run a Combinator attack (mode 1) to mash two wordlists together, as well as Hybrid Wordlist+Mask (mode 6) and Hybrid Mask+Wordlist (mode 7) attacks for those passwords that are <i>almost</i> in your dictionary.
 
-  <img width="1340" height="713" alt="Screenshot 2026-06-01 at 11 13 39 AM" src="images/screenshots/Screenshot 2026-06-01 at 11.13.39 AM.png" />
+  <img width="1340" height="713" alt="Screenshot 2026-06-01 at 11 13 39 AM" src="/images/screenshots/Screenshot 2026-06-01 at 11.13.39 AM.png" />
 
 - <b>"I'm Feeling Lucky" Task Assignment:</b> Not sure where to start? Let Hashview do the thinking. With a single click, "I'm Feeling Lucky" will automatically assign the top 10 historically most effective tasks to your job - the attacks that have cracked the most hashes for you in the past.
 
@@ -25,11 +25,11 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>New Dynamic Wordlists:</b> Hashview can now auto-generate additional dynamic wordlists for you, including an "All Usernames" list (built from every uploaded hashfile), an "All Customers" list, and an NTLM ciphertext list — all kept up to date automatically.
 
-<img width="1314" height="354" alt="Screenshot 2026-06-01 at 11 16 26 AM" src="images/screenshots/Screenshot 2026-06-01 at 11.16.26 AM.png" />
+<img width="1314" height="354" alt="Screenshot 2026-06-01 at 11 16 26 AM" src="/images/screenshots/Screenshot 2026-06-01 at 11.16.26 AM.png" />
 
 - <b>Dashboard & Analytics Upgrades:</b> The home page now features an Activity Graph charting passwords recovered over the past 7 days, so you can see your cracking momentum at a glance. We've also added "Hashview Wrapped" — a fun year-in-review of your cracking stats — and a new Shared Password Detection portlet that highlights accounts reusing the same password.
   
-<img width="564" height="273" alt="Screenshot 2026-06-01 at 11 17 13 AM" src="images/screenshots/Screenshot 2026-06-01 at 11.17.13 AM.png" />
+<img width="564" height="273" alt="Screenshot 2026-06-01 at 11 17 13 AM" src="/images/screenshots/Screenshot 2026-06-01 at 11.17.13 AM.png" />
 
 - <b>Rules Editor:</b> No more jumping to the command line to tweak your rules. You can now view and edit hashcat rule files directly in the browser.
 
@@ -41,7 +41,7 @@ Introducing the latest version of Hashview, v0.8.2. This release packs in a bunc
 
 - <b>User & Notification Improvements:</b> Admins can now promote and demote user roles directly, users can update their own email address from their profile, and Hashview can send both Email and Pushover notifications at the same time.
 
-<img width="1310" height="457" alt="Screenshot 2026-06-01 at 11 18 17 AM" src="images/screenshots/Screenshot 2026-06-01 at 11.18.17 AM.png" />
+<img width="1310" height="457" alt="Screenshot 2026-06-01 at 11 18 17 AM" src="/images/screenshots/Screenshot 2026-06-01 at 11.18.17 AM.png" />
 
 In addition to the features above, v0.8.2 includes a number of bug fixes. Sessions and CSRF tokens no longer break when the server restarts, agent error reporting is now working (with notifications to admins), and we've squashed a variety of race conditions, cascading deletion issues, and parsing problems.
 
